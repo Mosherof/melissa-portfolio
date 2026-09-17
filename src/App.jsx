@@ -3,12 +3,94 @@ import heroImg from './assets/hero.png'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
+import ProjectCard from './ProjectCard'
+
+const projects = [
+  {
+    title: 'Catastrophic Foregetting in RNN',
+    description: 'A personal portfolio built with React and Vite.',
+    tech: ['React', 'CSS', 'Vite'],
+    demoLink: '#',
+    githubLink: '#',
+  },
+  {
+    title: 'Modeling Biological Circuits',
+    description: 'A productivity app for organizing daily tasks.',
+    tech: ['JavaScript', 'LocalStorage', 'UI/UX'],
+    demoLink: '#',
+    githubLink: '#',
+  },
+    {
+    title: 'Signal Modulation Classification Using CNNs',
+    description: 'A productivity app for organizing daily tasks.',
+    tech: ['JavaScript', 'LocalStorage', 'UI/UX'],
+    demoLink: '#',
+    githubLink: '#',
+  },
+    {
+    title: 'Game Theory Perspective for King-Rook-King Endgames',
+    description: '',
+    tech: [''],
+    demoLink: '#',
+    githubLink: '#',
+  },
+      {
+    title: 'Controlling Yoga Pose Warrior III',
+    description: '',
+    tech: [''],
+    demoLink: '#',
+    githubLink: '#',
+  },
+      {
+    title: 'Agentic AI for Accelerated Deliveries',
+    description: '',
+    tech: [''],
+    demoLink: '#',
+    githubLink: '#',
+  },
+      {
+    title: 'Gap Analysis for Logitudinal BioMetrics',
+    description: '',
+    tech: [''],
+    demoLink: '#',
+    githubLink: '#',
+  },
+      {
+    title: 'Building FAST APIs for Healthspan RAG Pipelines',
+    description: '',
+    tech: [''],
+    demoLink: '#',
+    githubLink: '#',
+  },
+      {
+    title: 'Using LLMs as Judge for Search Quality Evaluations',
+    description: '',
+    tech: [''],
+    demoLink: '#',
+    githubLink: '#',
+  },
+      {
+    title: 'Med-Dashs',
+    description: '',
+    tech: [''],
+    demoLink: '#',
+    githubLink: '#',
+  },
+  
+]
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+ <section className="projects">
+        {projects.map((project) => (
+          <ProjectCard key={project.title} {...project} />
+        ))}
+      </section>
+
+
       <section id="center">
         <div className="hero">
           <img src={heroImg} className="base" width="170" height="179" alt="" />
@@ -16,7 +98,7 @@ function App() {
           <img src={viteLogo} className="vite" alt="Vite logo" />
         </div>
         <div>
-          <h1>Get started</h1>
+          <h1>Home</h1>
           <p>
             Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
           </p>
