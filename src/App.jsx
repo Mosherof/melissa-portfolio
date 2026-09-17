@@ -1,9 +1,30 @@
 import { useState } from 'react'
 import heroImg from './assets/hero.png'
+import { BsGithub } from 'react-icons/bs';
+import { FaLinkedin } from 'react-icons/fa';
+import { BiSpreadsheet } from "react-icons/bi";
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
+import { SiGmail } from 'react-icons/si';
 import './App.css'
 import ProjectCard from './ProjectCard'
+
+const education = [
+  {
+    degree: "Bachelor's Degree",
+    field: 'Bioengineering & Bioinformatics',
+    school: 'University of California, San Diego',
+    year: '2020-2024',
+    details: 'Developed computer science algorithms to life science problems.',
+  },
+  {
+    degree: "Master's Degree",
+    field: 'Electrical & Computer Engineering',
+    school: 'University of California, Santa Barbara',
+    year: '2025-2027',
+    details: 'Studying in machine learning, signal processing, & stochastic processes.',
+  },
+]
 
 const projects = [
   {
@@ -90,58 +111,52 @@ function App() {
 
   return (
     <>
- <section className="projects">
+      <section id="center">
+        <div className="hero">
+         
+        </div>
+        <div>
+          <h1>Home</h1>
+          <p>
+          I aim to build scalable, safe, and interdisciplinary machine learning tools that improve human wellness. This website serves as a vast collection of my projects & experiences. 
+          </p>
+        </div>
+      </section>
+     
+      <section>
+         <h1>Industry Experience</h1>
+      </section>
+  
+      <section>
+        <h1>Research Experience</h1>
+      </section>
+
+       <h1>Projects</h1>
+        <section className="projects">
         {projects.map((project) => (
           <ProjectCard key={project.title} {...project} />
         ))}
       </section>
 
-
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
+             <section className="education-section">
+        <h1>Education</h1>
+        <div className="education-grid">
+          {education.map((item) => (
+            <article key={item.degree} className="education-card">
+              <div className="education-badge">{item.degree}</div>
+              <h3>{item.field}</h3>
+              <p className="education-school">{item.school}</p>
+              <p className="education-year">{item.year}</p>
+              <p className="education-details">{item.details}</p>
+            </article>
+          ))}
         </div>
-        <div>
-          <h1>Home</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
       </section>
 
       <div className="ticks"></div>
 
       <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
+       
         <div id="social">
           <svg className="icon" role="presentation" aria-hidden="true">
             <use href="/icons.svg#social-icon"></use>
@@ -150,7 +165,9 @@ function App() {
           <p>Keep in touch for potential opportunities!</p>
           <ul>
             <li>
+              
               <a href="https://github.com/Mosherof" target="_blank">
+              <BsGithub size={30} color="#24292e" />
                 <svg
                   className="button-icon"
                   role="presentation"
@@ -163,6 +180,7 @@ function App() {
             </li>
             <li>
               <a href="https://www.linkedin.com/in/melissaosheroff/" target="_blank">
+              <FaLinkedin size={30} color="#0a66c2" />
                 <svg
                   className="button-icon"
                   role="presentation"
@@ -171,6 +189,19 @@ function App() {
                   <use href="/icons.svg#linkedin-icon"></use>
                 </svg>
                 LinkedIn
+              </a>
+            </li>
+                        <li>
+              <a href="https://www.linkedin.com/in/melissaosheroff/" target="_blank">
+               <BiSpreadsheet size={30}/>
+                <svg
+                  className="button-icon"
+                  role="presentation"
+                  aria-hidden="true"
+                >
+                  <use href="/icons.svg#gmail-icon"></use>
+                </svg>
+                Resume
               </a>
             </li>
           </ul>

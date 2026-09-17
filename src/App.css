@@ -1,16 +1,20 @@
 .counter {
   font-size: 16px;
-  padding: 5px 10px;
-  border-radius: 5px;
-  color: var(--accent);
-  background: var(--accent-bg);
-  border: 2px solid transparent;
-  transition: border-color 0.3s;
+  padding: 10px 18px;
+  border-radius: 999px;
+  color: var(--text);
+  background: linear-gradient(135deg, var(--accent-3), var(--accent-2));
+  border: 2px solid rgba(31, 26, 56, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   margin-bottom: 24px;
+  cursor: pointer;
+  box-shadow: var(--shadow);
 
   &:hover {
     border-color: var(--accent-border);
+    transform: translateY(-1px);
   }
+
   &:focus-visible {
     outline: 2px solid var(--accent);
     outline-offset: 2px;
@@ -19,6 +23,7 @@
 
 .hero {
   position: relative;
+  padding-top: 12px;
 
   .base,
   .framework,
@@ -31,6 +36,7 @@
     width: 170px;
     position: relative;
     z-index: 0;
+    filter: drop-shadow(0 12px 18px rgba(31, 26, 56, 0.14));
   }
 
   .framework,
@@ -44,6 +50,7 @@
     height: 28px;
     transform: perspective(2000px) rotateZ(300deg) rotateX(44deg) rotateY(39deg)
       scale(1.4);
+    filter: brightness(1.2);
   }
 
   .vite {
@@ -56,6 +63,149 @@
   }
 }
 
+.education-section {
+  padding: 2rem;
+}
+
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.education-card {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(31, 26, 56, 0.4);
+  border-radius: 18px;
+  padding: 1.5rem;
+  text-align: left;
+  box-shadow: var(--shadow);
+}
+
+.education-badge {
+  display: inline-block;
+  background: var(--accent-3);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 0.35rem 0.8rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 0.9rem;
+}
+
+.education-card h3 {
+  margin: 0 0 0.5rem;
+  color: var(--text-h);
+  font-size: 1.3rem;
+}
+
+.education-school,
+.education-year,
+.education-details {
+  margin: 0;
+}
+
+.education-school {
+  color: var(--text-soft);
+  font-weight: 600;
+}
+
+.education-year {
+  margin-top: 0.4rem;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.education-details {
+  margin-top: 0.85rem;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+  padding: 2rem;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(31, 26, 56, 0.4);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    border-color: rgba(31, 26, 56, 0.6);
+  }
+}
+
+.project-image {
+  height: 120px;
+  background: linear-gradient(135deg, var(--accent-2), var(--accent), var(--accent-3));
+}
+
+.project-content {
+  padding: 1rem 1rem 1.1rem;
+  text-align: left;
+}
+
+.project-content h3 {
+  margin: 0 0 0.65rem;
+  color: var(--text-h);
+  font-size: 1.2rem;
+}
+
+.project-content p {
+  color: var(--text);
+  margin-bottom: 0.8rem;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.project-tags span {
+  background: rgba(192, 245, 250, 0.45);
+  border: 1px solid rgba(31, 26, 56, 0.2);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 0.35rem 0.7rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+}
+
+.project-links {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.project-links a {
+  flex: 1;
+  text-align: center;
+  background: rgba(0, 129, 167, 0.08);
+  border: 1px solid rgba(31, 26, 56, 0.25);
+  color: var(--text);
+  text-decoration: none;
+  padding: 0.65rem 0.8rem;
+  border-radius: 10px;
+  transition: background 0.2s ease, border-color 0.2s ease;
+
+  &:hover {
+    background: rgba(255, 253, 130, 0.3);
+    border-color: rgba(31, 26, 56, 0.35);
+  }
+}
+
 #center {
   display: flex;
   flex-direction: column;
@@ -63,6 +213,7 @@
   place-content: center;
   place-items: center;
   flex-grow: 1;
+  padding: 2rem 1.5rem;
 
   @media (max-width: 1024px) {
     padding: 32px 20px 24px;
@@ -74,6 +225,7 @@
   display: flex;
   border-top: 1px solid var(--border);
   text-align: left;
+  background: rgba(255, 255, 255, 0.12);
 
   & > div {
     flex: 1 1 0;
@@ -87,6 +239,7 @@
     margin-bottom: 16px;
     width: 22px;
     height: 22px;
+    fill: var(--text-soft);
   }
 
   @media (max-width: 1024px) {
@@ -118,21 +271,24 @@
   a {
     color: var(--text-h);
     font-size: 16px;
-    border-radius: 6px;
+    border-radius: 12px;
     background: var(--social-bg);
     display: flex;
     padding: 6px 12px;
     align-items: center;
     gap: 8px;
     text-decoration: none;
-    transition: box-shadow 0.3s;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
 
     &:hover {
       box-shadow: var(--shadow);
+      transform: translateY(-1px);
     }
+
     .button-icon {
       height: 18px;
       width: 18px;
+      fill: var(--text-soft);
     }
   }
 
@@ -177,6 +333,7 @@
     left: 0;
     border-left-color: var(--border);
   }
+
   &::after {
     right: 0;
     border-right-color: var(--border);
