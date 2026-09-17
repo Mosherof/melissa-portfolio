@@ -1,13 +1,19 @@
 import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import { BsGithub } from 'react-icons/bs';
-import { FaLinkedin } from 'react-icons/fa';
-import { BiSpreadsheet } from "react-icons/bi";
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import { SiGmail } from 'react-icons/si';
+import Me from './assets/me.jpg'
+import { BsGithub } from 'react-icons/bs'
+import { FaLinkedin, FaMapMarkerAlt, FaEnvelope, FaCheck } from 'react-icons/fa'
+import { BiSpreadsheet } from 'react-icons/bi'
 import './App.css'
 import ProjectCard from './ProjectCard'
+
+const navItems = [
+  { label: 'Home', href: '#center' },
+  { label: 'Industry', href: '#industry' },
+  { label: 'Research', href: '#research' },
+  { label: 'Projects', href: '#projects' },
+  { label: 'Education', href: '#education' },
+  { label: 'Connect', href: '#connect' },
+]
 
 const education = [
   {
@@ -111,34 +117,64 @@ function App() {
 
   return (
     <>
+      <header className="topbar">
+        <div className="topbar-inner">
+          <a href="#center" className="brand-name">Melissa Osheroff</a>
+          <nav className="topnav" aria-label="Primary navigation">
+            {navItems.map((item, index) => (
+              <a
+                key={item.label}
+                href={item.href}
+                className={index === 0 ? 'nav-link home-link' : 'nav-link'}
+              >
+                {item.label}
+              </a>
+            ))}
+          </nav>
+        </div>
+      </header>
+
       <section id="center">
-        <div className="hero">
-         
+        <h1>Home</h1>
+        <div className="intro-row">
+          <div className="profile-image-wrap">
+            <img src={Me} alt="Melissa" className="profile-photo" />
+          </div>
+          <div className="intro-copy">
+            <p>
+              I build safe, scalable, & interdisciplinary AI tools that advance human wellness. My experience includes designing end-to-end digital pipelines, from data intake to user-friendly dashboards. Upon completing my master's degree in 2027, I will drive biotechnology innovation as an ML, process, or systems engineer. This website serves as a vast collection of my experiences, projects, skills, & interests.
+
+            </p>
+             <div className="meta-tags">
+              <span className="meta-tag"><FaMapMarkerAlt className="meta-icon" /> Goleta, CA</span>
+              <span className="meta-tag"><FaEnvelope className="meta-icon" /> MeOsheroff@ucsb.edu</span>
+              <span className="meta-tag"><FaCheck className="meta-icon" /> Open to collaboration</span>
+            </div>
+
+          </div>
         </div>
-        <div>
-          <h1>Home</h1>
-          <p>
-          I aim to build scalable, safe, and interdisciplinary machine learning tools that improve human wellness. This website serves as a vast collection of my projects & experiences. 
-          </p>
-        </div>
+       
+            
       </section>
-     
-      <section>
-         <h1>Industry Experience</h1>
+
+      <section id="industry">
+        <h1>Industry Experience</h1>
       </section>
-  
-      <section>
+
+      <section id="research">
         <h1>Research Experience</h1>
       </section>
 
-       <h1>Projects</h1>
-        <section className="projects">
-        {projects.map((project) => (
-          <ProjectCard key={project.title} {...project} />
-        ))}
+      <section id="projects">
+        <h1>Projects</h1>
+        <div className="projects">
+          {projects.map((project) => (
+            <ProjectCard key={project.title} {...project} />
+          ))}
+        </div>
       </section>
 
-             <section className="education-section">
+      <section id="education" className="education-section">
         <h1>Education</h1>
         <div className="education-grid">
           {education.map((item) => (
@@ -155,8 +191,7 @@ function App() {
 
       <div className="ticks"></div>
 
-      <section id="next-steps">
-       
+      <section id="connect" className="next-steps" aria-label="Connect with Melissa">
         <div id="social">
           <svg className="icon" role="presentation" aria-hidden="true">
             <use href="/icons.svg#social-icon"></use>
@@ -165,9 +200,8 @@ function App() {
           <p>Keep in touch for potential opportunities!</p>
           <ul>
             <li>
-              
               <a href="https://github.com/Mosherof" target="_blank">
-              <BsGithub size={30} color="#24292e" />
+                <BsGithub size={30} color="#24292e" />
                 <svg
                   className="button-icon"
                   role="presentation"
@@ -180,7 +214,7 @@ function App() {
             </li>
             <li>
               <a href="https://www.linkedin.com/in/melissaosheroff/" target="_blank">
-              <FaLinkedin size={30} color="#0a66c2" />
+                <FaLinkedin size={30} color="#0a66c2" />
                 <svg
                   className="button-icon"
                   role="presentation"
@@ -191,9 +225,9 @@ function App() {
                 LinkedIn
               </a>
             </li>
-                        <li>
+            <li>
               <a href="https://www.linkedin.com/in/melissaosheroff/" target="_blank">
-               <BiSpreadsheet size={30}/>
+                <BiSpreadsheet size={30}/>
                 <svg
                   className="button-icon"
                   role="presentation"
