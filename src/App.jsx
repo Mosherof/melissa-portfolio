@@ -8,75 +8,81 @@ import ProjectCard from './ProjectCard'
 const projects = [
   {
     title: 'Catastrophic Foregetting in RNN',
-    description: 'A personal portfolio built with React and Vite.',
-    tech: ['React', 'CSS', 'Vite'],
+    description: 'Observing bifuracations and dynamics of RNNs when learning unique tasks.',
+    tech: ['Pytorch', 'Neural Networks'],
     demoLink: '#',
-    githubLink: '#',
+    githubLink: 'https://github.com/Mosherof/When-to-Reuse',
   },
   {
     title: 'Modeling Biological Circuits',
-    description: 'A productivity app for organizing daily tasks.',
-    tech: ['JavaScript', 'LocalStorage', 'UI/UX'],
-    demoLink: '#',
+    description: 'Recreating biological feedback loops.',
+    tech: ['MATLAB', 'ODESolver45'],
+    demoLink: 'https://github.com/Mosherof/CHEM154-BIOE254-Final-Modeling-Ligand-Affect-on-cAMP-Dynamics',
     githubLink: '#',
   },
     {
     title: 'Signal Modulation Classification Using CNNs',
-    description: 'A productivity app for organizing daily tasks.',
-    tech: ['JavaScript', 'LocalStorage', 'UI/UX'],
+    description: '',
+    tech: ['Python', 'Neural Networks', 'Machine Learning', 'Evaluations'],
     demoLink: '#',
     githubLink: '#',
   },
     {
     title: 'Game Theory Perspective for King-Rook-King Endgames',
     description: '',
-    tech: [''],
+    tech: ['MATLAB', 'Controls', 'Game Theory'],
     demoLink: '#',
-    githubLink: '#',
+    githubLink: 'https://github.com/raaghav-t/windy',
   },
       {
     title: 'Controlling Yoga Pose Warrior III',
     description: '',
-    tech: [''],
+    tech: ['MATLAB', 'Controls', 'Robotics'],
     demoLink: '#',
     githubLink: '#',
   },
       {
     title: 'Agentic AI for Accelerated Deliveries',
     description: '',
-    tech: [''],
+    tech: ['Machine Learning', 'Microsoft Copilot Studio', 'Agents', 'Manufacturing', 'Evaluations'],
     demoLink: '#',
     githubLink: '#',
   },
       {
     title: 'Gap Analysis for Logitudinal BioMetrics',
     description: '',
-    tech: [''],
+    tech: ['Python', 'Machine Learning', 'Data Analysis', 'Evaluations'],
     demoLink: '#',
     githubLink: '#',
   },
       {
     title: 'Building FAST APIs for Healthspan RAG Pipelines',
     description: '',
-    tech: [''],
+    tech: ['Typescript', 'Python', 'Fast API', 'Machine Learning'],
     demoLink: '#',
     githubLink: '#',
   },
       {
     title: 'Using LLMs as Judge for Search Quality Evaluations',
     description: '',
-    tech: [''],
+    tech: ['Python', 'Agents', 'Evaluations'],
     demoLink: '#',
     githubLink: '#',
   },
       {
-    title: 'Med-Dashs',
+    title: 'Med-Dash',
     description: '',
-    tech: [''],
+    tech: ['React', 'TypeScript', 'Data Cleaning', 'Python'],
     demoLink: '#',
-    githubLink: '#',
+    githubLink: 'https://github.com/Mosherof/med-dash-bioe',
   },
-  
+  {
+    title: 'Emosense',
+    description: '',
+    tech: ['MATLAB', 'Python', 'Time Series Allignment', 'Sensor Data'],
+    demoLink: '#',
+    githubLink: 'https://github.com/Mosherof/emosense',
+  },
 ]
 
 function App() {
@@ -140,11 +146,11 @@ function App() {
           <svg className="icon" role="presentation" aria-hidden="true">
             <use href="/icons.svg#social-icon"></use>
           </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
+          <h2>Let's Connect</h2>
+          <p>Keep in touch for potential opportunities!</p>
           <ul>
             <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
+              <a href="https://github.com/Mosherof" target="_blank">
                 <svg
                   className="button-icon"
                   role="presentation"
@@ -156,39 +162,15 @@ function App() {
               </a>
             </li>
             <li>
-              <a href="https://chat.vite.dev/" target="_blank">
+              <a href="https://www.linkedin.com/in/melissaosheroff/" target="_blank">
                 <svg
                   className="button-icon"
                   role="presentation"
                   aria-hidden="true"
                 >
-                  <use href="/icons.svg#discord-icon"></use>
+                  <use href="/icons.svg#linkedin-icon"></use>
                 </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
+                LinkedIn
               </a>
             </li>
           </ul>
