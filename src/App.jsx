@@ -314,7 +314,7 @@ function App() {
               </a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/melissaosheroff/" target="_blank">
+              <a href="https://drive.google.com/file/d/1N8Lpl-OH1TEq7q3bnsLU5X35h6PVAFIJ/view?usp=sharing" target="_blank">
                 <BiSpreadsheet size={30}/>
                 <svg
                   className="button-icon"
