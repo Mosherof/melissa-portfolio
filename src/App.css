@@ -1,3 +1,197 @@
+.timeline {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.65rem;
+  margin-top: 1.8rem;
+  padding: 1.5rem 0.5rem 0.25rem;
+}
+
+.timeline-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+
+.timeline-item:not(:last-child)::after {
+  content: '➜';
+  position: absolute;
+  right: -1.35rem;
+  top: 0.8rem;
+  font-size: 1.1rem;
+  line-height: 0.5;
+  color: rgba(15, 93, 93, 0.798);
+  font-weight: 300;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.timeline-date-wrap {
+  display: none;
+}
+
+.timeline-marker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 0.6rem;
+}
+
+.timeline-dot {
+  display: none;
+}
+
+.timeline-dot-label {
+  display: inline-block;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+  background: rgba(88, 123, 127, 0.12);
+  border: 1px solid rgba(0, 5, 5, 0.12);
+  border-radius: 999px;
+  padding: 0.25rem 0.5rem;
+  white-space: nowrap;
+}
+
+.timeline-card {
+  position: relative;
+  width: 100%;
+  background: rgba(160, 221, 255, 0.18);
+  border: 1px solid rgba(0, 5, 5, 0.14);
+  border-radius: 12px;
+  padding: 0.7rem 0.8rem 0.75rem;
+  box-shadow: 0 8px 18px rgba(0, 5, 5, 0.06);
+  min-height: 88px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.timeline-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 22px rgba(0, 5, 5, 0.12);
+  border-color: rgba(0, 5, 5, 0.25);
+  background: rgba(160, 221, 255, 0.28);
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  min-height: 1.2rem;
+  margin-bottom: 0.35rem;
+}
+
+.timeline-date,
+.timeline-location {
+  display: inline-block;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+  background: rgba(88, 123, 127, 0.12);
+  border: 1px solid rgba(0, 5, 5, 0.12);
+  border-radius: 6px;
+  padding: 0.25rem 0.5rem;
+}
+
+.timeline-location {
+  opacity: 0;
+  transform: translateY(-2px);
+  max-height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  letter-spacing: 0.04em;
+  transition: opacity 0.18s ease, transform 0.18s ease, max-height 0.18s ease, visibility 0.18s ease;
+}
+
+.timeline-card:hover .timeline-location,
+.timeline-card:focus-within .timeline-location {
+  opacity: 1;
+  transform: translateY(0);
+  max-height: 1.5rem;
+  visibility: visible;
+}
+
+.timeline-summary-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.12rem;
+}
+
+.timeline-card h3 {
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--text-h);
+}
+
+.timeline-company {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.timeline-details {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.28s ease, opacity 0.22s ease, margin-top 0.22s ease, padding 0.22s ease;
+  margin-top: 0;
+  padding-top: 0;
+  width: 100%;
+  text-align: left;
+}
+
+.timeline-card:hover .timeline-details,
+.timeline-card:focus-within .timeline-details {
+  max-height: 520px;
+  opacity: 1;
+  margin-top: 0.45rem;
+  padding-top: 0.1rem;
+}
+
+.timeline-summary {
+  margin: 0 0 0.35rem;
+  color: var(--text);
+  line-height: 1.45;
+  font-size: 0.72rem;
+}
+
+.timeline-summary-list {
+  margin: 0 0 0.1rem;
+  padding-left: 1.1rem;
+  text-align: left;
+}
+
+.timeline-highlights {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--text);
+  line-height: 1.5;
+  font-size: 0.74rem;
+  list-style: disc;
+  text-align: left;
+}
+
+.timeline-highlights li {
+  padding-left: 0.05rem;
+  margin-bottom: 0.12rem;
+}
+
+.timeline-highlights li::marker {
+  color: rgba(0, 5, 5, 0.7);
+  font-size: 0.8em;
+}
+
+.timeline-highlights li + li {
+  margin-top: 0.12rem;
+}
+
 .education-section {
   padding: 2rem;
 }
@@ -98,7 +292,7 @@
 }
 
 .project-content p {
-  color: var(--text);
+  color: var(--text-soft);
   margin-bottom: 0.8rem;
 }
 
@@ -110,9 +304,9 @@
 }
 
 .project-tags span {
-  background: #A0DDFF80;
+  background: rgba(88, 123, 127, 0.12);
   border: 1px solid #00050533;
-  color: var(--text);
+  color: var(--text-soft);
   border-radius: 999px;
   padding: 0.35rem 0.7rem;
   font-size: 0.75rem;

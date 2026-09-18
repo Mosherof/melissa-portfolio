@@ -1,10 +1,11 @@
 :root {
-  --bg: #A0DDFF;
+  --bg: #BFEAFF;
   --bg-strong: #EEFCCE;
-  --panel: #A0DDFF66;
+  --panel: #C8F0FF66;
   --text: #000505;
   --text-h: #000505;
   --text-soft: #587B7F;
+  --text-secondary: #587B7F;
   --border: #000505;
   --code-bg: #0005050D;
   --accent: #587B7F;
@@ -61,7 +62,7 @@ body {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  background: #A0DDFF33;
+  background: rgba(191, 234, 255, 0.25);
   backdrop-filter: blur(6px);
 }
 
@@ -95,9 +96,13 @@ h2 {
   }
 }
 
-p {
+p,
+li,
+small,
+figcaption,
+label {
   margin: 0;
-  color: var(--text);
+  color: var(--text-secondary);
 }
 
 code,

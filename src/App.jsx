@@ -5,6 +5,7 @@ import { FaLinkedin, FaMapMarkerAlt, FaEnvelope, FaCheck } from 'react-icons/fa'
 import { BiSpreadsheet } from 'react-icons/bi'
 import './App.css'
 import ProjectCard from './ProjectCard'
+import ExperienceTimeline from './ExperienceTimeline'
 
 const navItems = [
   { label: 'Home', href: '#center' },
@@ -29,6 +30,89 @@ const education = [
     school: 'University of California, Santa Barbara',
     year: '2025-2027',
     details: 'Studying in machine learning, signal processing, & stochastic processes.',
+  },
+]
+
+const industryExperience = [
+  {
+    period: 'Jun 2026 – Sep 2026',
+    role: 'AI Agent Developer Intern',
+    company: 'BioMarin',
+    location: 'Novato, CA',
+    summary: 'Developed AI-powered workflows for technical operations and process improvement in a regulated biotech environment.',
+    highlights: [
+      'Built and refined Microsoft Copilot agents for document intake, knowledge retrieval, and technical writing support across operational workflows.',
+      'Worked with cross-functional stakeholders to define use cases, validate performance, and shape deployment-ready AI solutions.',
+    ],
+  },
+  {
+    period: 'Jun 2024 – Sep 2024',
+    role: 'Software Engineering Intern',
+    company: 'Codex Health',
+    location: 'Palo Alto, CA',
+    summary: 'Implemented health-tech backend APIs and architecture decisions to support clinician-facing digital tools.',
+    highlights: [
+      'Designed YAML API specifications and implemented Go endpoints for patient data transfer between GCP services and the UI.',
+      'Documented infrastructure decisions through ADRs and contributed to code reviews, pull requests, and demo-ready product work.',
+    ],
+  },
+  {
+    period: 'Jun 2023 – Sep 2023',
+    role: 'Software Engineering Intern',
+    company: 'Codex Health',
+    location: 'Palo Alto, CA',
+    summary: 'Built and supported patient-facing digital workflows for clinical data collection and software iteration in a startup environment.',
+    highlights: [
+      'Created four Go APIs used by 110+ diabetic patients to record and deliver data to clinicians in real time.',
+      'Improved code reliability through unit tests, refactors, and data migration support during agile product development.',
+    ],
+  },
+  {
+    period: 'Jan 2023 – Aug 2023',
+    role: 'Data Engineering Intern',
+    company: 'Surgalign Spine',
+    location: 'San Diego, CA',
+    summary: 'Developed data analysis and visualization tools to support AI and image-quality workflows in healthcare technology.',
+    highlights: [
+      'Built Python and Streamlit dashboards to visualize MRI and CT quality metrics and identify low-quality datasets in the AI pipeline.',
+      'Used a Random Forest classifier to achieve 89% accuracy on image classification tasks and improve data quality evaluation.',
+    ],
+  },
+]
+
+const researchExperience = [
+  {
+    period: 'Feb 2025 – Mar 2026',
+    role: 'Research Intern',
+    company: 'Price Lab, Buck Institute for Research on Aging',
+    location: 'Novato, CA',
+    summary: 'Expanded a biology-focused AI interface and built analytical tools to study health predictors and intervention effects.',
+    highlights: [
+      'Developed TypeScript frontend features and FastAPI endpoints for a multimodal biology AI platform and RAG-based workflows.',
+      'Used OLS regression and Python pipelines to identify key genetic predictors of health outcomes and support predictive intervention work.',
+    ],
+  },
+  {
+    period: 'Jan 2025 – Jul 2025',
+    role: 'Research Intern',
+    company: 'Neuroscape, UCSF',
+    location: 'San Francisco, CA',
+    summary: 'Preprocessed multimodal sensor data and built synchronization pipelines to support emotion-research modeling.',
+    highlights: [
+      'Designed MATLAB and Python pipelines to clean and align data from 150+ sensors, improving the usable dataset for downstream analysis.',
+      'Developed anomaly detection and timing-correction scripts that increased the reliability of EEG and photodiode synchronization.',
+    ],
+  },
+  {
+    period: 'Jun 2022 – Dec 2022',
+    role: 'Research Assistant',
+    company: 'Majithia Lab, UC San Diego',
+    location: 'San Diego, CA',
+    summary: 'Applied machine learning and computational methods to study biomedical patterns and health-related data structures.',
+    highlights: [
+      'Used KNN and K-means to identify distinct archetypes of blood sugar rhythms and evaluate biological data distinctiveness.',
+      'Built a Python data retrieval pipeline to fetch gene-region data from HuGe BioIndex APIs for analysis workflows.',
+    ],
   },
 ]
 
@@ -114,6 +198,8 @@ const projects = [
 
 function App() {
   const [count, setCount] = useState(0)
+  const orderedIndustryExperience = [...industryExperience].reverse()
+  const orderedResearchExperience = [...researchExperience].reverse()
 
   return (
     <>
@@ -159,10 +245,12 @@ function App() {
 
       <section id="industry">
         <h1>Industry Experience</h1>
+        <ExperienceTimeline entries={orderedIndustryExperience} />
       </section>
 
       <section id="research">
         <h1>Research Experience</h1>
+        <ExperienceTimeline entries={orderedResearchExperience} />
       </section>
 
       <section id="projects">
