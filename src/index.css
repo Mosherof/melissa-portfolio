@@ -16,15 +16,15 @@
   --social-bg: #FCD3DE66;
   --shadow: #0005051F 0 18px 32px -18px;
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --sans: system-ui, 'Segoe UI', Inter, sans-serif;
+  --heading: system-ui, 'Segoe UI', Inter, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
 
   font: 18px/145% var(--sans);
   letter-spacing: 0.18px;
   color-scheme: light;
   color: var(--text);
-  background: var(--bg);
+  background: var(--code-bg);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -53,7 +53,7 @@ body {
 }
 
 #root {
-  width: 1200px;
+  width: 90%; 
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
