@@ -277,12 +277,12 @@ function App() {
         </div>
       </section>
 
-      <div className="ticks"></div>
+
 
       <section id="connect" className="next-steps" aria-label="Connect with Melissa">
-        <div id="social">
-          <h2>Let's Connect</h2>
-          <p>Keep in touch for potential opportunities!</p>
+      
+          <h2>Let's Connect!</h2>
+          {/* <p>Keep in touch for potential opportunities!</p> */}
           <ul>
             <li>
               <a href="https://github.com/Mosherof" target="_blank">
@@ -303,10 +303,10 @@ function App() {
               </a>
             </li>
           </ul>
-        </div>
+   
       </section>
 
-      <div className="ticks"></div>
+
       <section id="spacer"></section>
     </>
   )
