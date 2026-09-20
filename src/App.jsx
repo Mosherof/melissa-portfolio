@@ -84,7 +84,7 @@ const researchExperience = [
   {
     period: 'Feb 2025 – Mar 2026',
     role: 'Research Intern',
-    company: 'Price Lab, Buck Institute for Research on Aging',
+    company: 'Price Lab, Buck Institute',
     location: 'Novato, CA',
     summary: 'Expanded a biology-focused AI interface and built analytical tools to study health predictors and intervention effects.',
     highlights: [
@@ -106,7 +106,7 @@ const researchExperience = [
   {
     period: 'Jun 2022 – Dec 2022',
     role: 'Research Assistant',
-    company: 'Majithia Lab, UC San Diego',
+    company: 'Majithia Lab, UCSD',
     location: 'San Diego, CA',
     summary: 'Applied machine learning and computational methods to study biomedical patterns and health-related data structures.',
     highlights: [

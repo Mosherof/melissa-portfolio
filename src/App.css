@@ -232,7 +232,7 @@
 .education-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.25rem;
+  gap: 1rem;
   margin-top: 1rem;
 }
 
@@ -562,8 +562,7 @@ section:first-of-type {
 
   .icon {
     margin-bottom: 16px;
-    width: 22px;
-    height: 22px;
+    width: 15%;
     fill: var(--text-soft);
   }
 
