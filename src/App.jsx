@@ -205,7 +205,7 @@ function App() {
     <>
       <header className="topbar">
         <div className="topbar-inner">
-          <a href="#center" className="brand-name">Melissa Osheroff</a>
+          <a href="#center" className="brand-name"> Melissa Osheroff</a>
           <nav className="topnav" aria-label="Primary navigation">
             {navItems.map((item, index) => (
               <a
@@ -219,8 +219,8 @@ function App() {
           </nav>
         </div>
       </header>
-
-      <section id="center">
+            {/* id="center" */}
+      <section>  
         <h1>Home</h1>
         <div className="intro-row">
           <div className="profile-image-wrap">
