@@ -373,7 +373,7 @@ html {
 }
 
 section {
-  width: calc(100% - 10rem);
+  width: min(1200px, calc(100% - 2rem));
   margin: 0 auto;
   padding: 2rem 0;
   border-top: 1px solid #000505;
@@ -488,7 +488,7 @@ section:first-of-type {
 .meta-tags {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: flex-start;
   gap: 0.4rem;
@@ -521,7 +521,7 @@ section:first-of-type {
 
 .intro-copy {
   flex: 1 1 0;
-  /* width: 100%; */
+  width: 100%;
   min-width: 0;
 }
 
@@ -531,12 +531,16 @@ section:first-of-type {
   margin: 0;
   font-size: 1.05rem;
   line-height: 1.7;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 @media (max-width: 768px) {
   .intro-row {
     flex-direction: column;
+    align-items: center;
     text-align: center;
+    width: 100%;
   }
 
   .profile-photo {
@@ -544,8 +548,42 @@ section:first-of-type {
     height: 150px;
   }
 
+  .intro-copy {
+    width: 100%;
+  }
+
   .intro-copy p {
     text-align: center;
+    font-size: 0.98rem;
+    line-height: 1.6;
+  }
+
+  .meta-tags {
+    justify-content: center;
+  }
+
+  .next-steps {
+    padding: 0.5rem;
+  }
+
+  .next-steps > div {
+    padding: 20px 16px;
+  }
+
+  .next-steps ul {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .next-steps ul li {
+    width: 100%;
+  }
+
+  .next-steps ul a {
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+    white-space: nowrap;
   }
 }
 
