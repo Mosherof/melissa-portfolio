@@ -39,7 +39,7 @@ const industryExperience = [
     role: 'AI Agent Developer Intern',
     company: 'BioMarin',
     location: 'Novato, CA',
-    summary: 'Developed AI-powered workflows for technical operations and process improvement in a regulated biotech environment.',
+    summary: 'Developed AI-powered workflows for technical operations on the Systems, Process, & Delivery Team.',
     highlights: [
       'Built and refined Microsoft Copilot agents for document intake, knowledge retrieval, and technical writing support across operational workflows.',
       'Worked with cross-functional stakeholders to define use cases, validate performance, and shape deployment-ready AI solutions.',
@@ -84,7 +84,7 @@ const researchExperience = [
   {
     period: 'Feb 2025 – Mar 2026',
     role: 'Research Intern',
-    company: 'Price Lab, Buck Institute for Research on Aging',
+    company: 'Price Lab, Buck Institute',
     location: 'Novato, CA',
     summary: 'Expanded a biology-focused AI interface and built analytical tools to study health predictors and intervention effects.',
     highlights: [
@@ -106,7 +106,7 @@ const researchExperience = [
   {
     period: 'Jun 2022 – Dec 2022',
     role: 'Research Assistant',
-    company: 'Majithia Lab, UC San Diego',
+    company: 'Majithia Lab, UCSD',
     location: 'San Diego, CA',
     summary: 'Applied machine learning and computational methods to study biomedical patterns and health-related data structures.',
     highlights: [
@@ -205,7 +205,7 @@ function App() {
     <>
       <header className="topbar">
         <div className="topbar-inner">
-          <a href="#center" className="brand-name">Melissa Osheroff</a>
+          <a href="#center" className="brand-name"> Melissa Osheroff</a>
           <nav className="topnav" aria-label="Primary navigation">
             {navItems.map((item, index) => (
               <a
@@ -219,8 +219,8 @@ function App() {
           </nav>
         </div>
       </header>
-
-      <section id="center">
+            {/* id="center" */}
+      <section>  
         <h1>Home</h1>
         <div className="intro-row">
           <div className="profile-image-wrap">
@@ -277,60 +277,36 @@ function App() {
         </div>
       </section>
 
-      <div className="ticks"></div>
+
 
       <section id="connect" className="next-steps" aria-label="Connect with Melissa">
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Let's Connect</h2>
-          <p>Keep in touch for potential opportunities!</p>
+      
+          <h2>Let's Connect!</h2>
+          {/* <p>Keep in touch for potential opportunities!</p> */}
           <ul>
             <li>
               <a href="https://github.com/Mosherof" target="_blank">
                 <BsGithub size={30} color="#24292e" />
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
                 GitHub
               </a>
             </li>
             <li>
               <a href="https://www.linkedin.com/in/melissaosheroff/" target="_blank">
                 <FaLinkedin size={30} color="#0a66c2" />
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#linkedin-icon"></use>
-                </svg>
                 LinkedIn
               </a>
             </li>
             <li>
               <a href="https://drive.google.com/file/d/1N8Lpl-OH1TEq7q3bnsLU5X35h6PVAFIJ/view?usp=sharing" target="_blank">
-                <BiSpreadsheet size={30}/>
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#gmail-icon"></use>
-                </svg>
+                <BiSpreadsheet size={30}  color="#587B7F"/>
                 Resume
               </a>
             </li>
           </ul>
-        </div>
+   
       </section>
 
-      <div className="ticks"></div>
+
       <section id="spacer"></section>
     </>
   )

@@ -16,15 +16,15 @@
   --social-bg: #FCD3DE66;
   --shadow: #0005051F 0 18px 32px -18px;
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --sans: system-ui, 'Segoe UI', Inter, sans-serif;
+  --heading: system-ui, 'Segoe UI', Inter, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
 
   font: 18px/145% var(--sans);
   letter-spacing: 0.18px;
   color-scheme: light;
   color: var(--text);
-  background: var(--bg);
+  background: var(--code-bg);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -46,14 +46,14 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  background:
+  /* background:
     radial-gradient(circle at top, #FCD3DEB3 0%, transparent 24%),
-    linear-gradient(180deg, var(--bg) 0%, var(--bg-strong) 100%);
+    linear-gradient(180deg, var(--code-bg) 0%, var(--code-bg) 100%); */
   color: var(--text);
 }
 
 #root {
-  width: 1200px;
+  width: 99%; 
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
@@ -63,7 +63,7 @@ body {
   flex-direction: column;
   box-sizing: border-box;
   background: rgba(191, 234, 255, 0.25);
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(2px);
 }
 
 h1,
