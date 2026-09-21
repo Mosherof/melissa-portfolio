@@ -10,20 +10,15 @@ export default function ExperienceTimeline({ entries }) {
           <article className="timeline-card">
 
             <div className="timeline-summary-block">
-              <h3 >{entry.role}</h3>
-          
-                  <div className="grid-container">
-                  <div className="grid-item-left">
-                    <p className="timeline-company">{entry.company}</p>
-                  </div>
-                  <div className="grid-item-right">
-                    <p className="timeline-company" >{entry.location}</p>
-                  </div>
-                </div>
+              <h3>{entry.role}</h3>
+              <p className="timeline-company">{entry.company}</p>
             </div>
 
 
             <div className="timeline-details">
+              <div className="timeline-header">
+                {entry.location ? <span className="timeline-location">{entry.location}</span> : null}
+              </div>
 
               {entry.summary ? (
                 <ul className="timeline-highlights timeline-summary-list">
