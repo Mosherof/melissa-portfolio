@@ -1,18 +1,15 @@
+import { Link } from 'react-router-dom'
+
 export default function ProjectCard({ title, description, tech, link, githubLink }) {
   return (
-    <div className="project-card">
-      {/* <div className="project-image"> */}
-        <iframe
-        src="../..Catastrophic Forgetting in RNN.pdf"
-        width="100%"
-        // height="500px"
-        frameBorder="0"
-        title="PowerPoint Presentation"
-        allowFullScreen
-      >
-        This is an embedded [Microsoft Office](https://office.com) presentation, powered by Office.
-      </iframe>
-      {/* </div> */}
+      <Link to={link}>
+        <div className="project-card">
+          <iframe
+        src={"https://drive.google.com/file/d/1_JWVMwGDUJEacXQ4P9vJ-EHoDVc8UhUf/preview"}
+        width="90%"
+        height="200rem"
+        // title="Resume"
+      />
       <div className="project-content">
         <h3>{title}</h3>
         <p>{description}</p>
@@ -31,5 +28,8 @@ export default function ProjectCard({ title, description, tech, link, githubLink
         </div>
       </div>
     </div>
+      
+      </Link>
+      
   )
 }

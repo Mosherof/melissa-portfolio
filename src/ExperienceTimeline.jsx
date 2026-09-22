@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 export default function ExperienceTimeline({ entries }) {
   return (
     <div className="timeline">
@@ -6,6 +7,11 @@ export default function ExperienceTimeline({ entries }) {
           <div className="timeline-marker" aria-hidden="true">
             <span className="timeline-date timeline-dot-label">{entry.period}</span>
           </div>
+
+          <Link to="/catastrophic-forgetting">
+            <button>View Resume</button>
+          </Link>
+          {/* <Route path="/catastrophic-forgetting" element={<CatastrophicForgetting/>} /> */}
 
           <article className="timeline-card">
 
