@@ -10,6 +10,17 @@ import {Routes, Route } from 'react-router-dom'
 import { useEffect } from 'react'
 
 
+//import CatastrophicForgetting from './catastrophic-forgetting'
+
+
+import cataImage from '../assets/Catastrophic Forgetting.png'
+import CGM from '../assets/CGM.png'
+import Gap from '../assets/Gap Analysis.png'
+import MedDash from '../assets/MedDash.png'
+import neuroscape from '../assets/neuroscape.webp'
+import ozempic from '../assets/Ozempic.png'
+import process from '../assets/Process Flow of Agent.png'
+import sigInt from '../assets/SigInt.png'
 
 const education = [
   {
@@ -114,80 +125,90 @@ const researchExperience = [
 const projects = [
   {
     title: 'Catastrophic Foregetting in RNN',
-    description: 'Observing bifuracations and dynamics of RNNs when learning unique tasks.',
-    tech: ['Pytorch', 'Neural Networks'],
+    description: 'Observing bifuracations when learning unique tasks.',
+    tech: [], //'Pytorch', 'ML'
     link: '/catastrophic-forgetting',
     githubLink: 'https://github.com/Mosherof/When-to-Reuse',
+    pic: cataImage
   },
   {
     title: 'Modeling Biological Circuits',
     description: 'Recreating biological feedback loops.',
-    tech: ['MATLAB', 'ODESolver45'],
-    link: 'https://github.com/Mosherof/CHEM154-BIOE254-Final-Modeling-Ligand-Affect-on-cAMP-Dynamics',
+    tech: [], //'MATLAB', 'Bioinformatics'
+    link: '/biological-circuits',
     githubLink: '#',
+    pic:ozempic
   },
     {
     title: 'Signal Modulation Classification Using CNNs',
     description: '',
-    tech: ['Python', 'Neural Networks', 'Machine Learning', 'Evaluations'],
-    link: '#',
+    tech: [], //'Python','ML'
+    link: '/sigint',
     githubLink: '#',
+    pic:sigInt
   },
-    {
-    title: 'Game Theory Perspective for King-Rook-King Endgames',
-    description: '',
-    tech: ['MATLAB', 'Controls', 'Game Theory'],
-    link: '#',
-    githubLink: 'https://github.com/raaghav-t/windy',
-  },
-      {
-    title: 'Controlling Yoga Pose Warrior III',
-    description: '',
-    tech: ['MATLAB', 'Controls', 'Robotics'],
-    link: '#',
-    githubLink: '#',
-  },
+  //   {
+  //   title: 'Game Theory for King-Rook-King Endgames',
+  //   description: '',
+  //   tech: [], //'MATLAB', 'Controls', 'Game Theory'
+  //   link: '#',
+  //   githubLink: 'https://github.com/raaghav-t/windy',
+  // },
+  //     {
+  //   title: 'Controlling Yoga Pose Warrior III',
+  //   description: '',
+  //   tech: ['MATLAB', 'Controls', 'Robotics'],
+  //   link: '#',
+  //   githubLink: '#',
+  //   pic:
+  // },
       {
     title: 'Agentic AI for Accelerated Deliveries',
     description: '',
-    tech: ['Machine Learning', 'Microsoft Copilot Studio', 'Agents', 'Manufacturing', 'Evaluations'],
-    link: '#',
+    tech: [], //'ML', 'Agents'
+    link: '/agentic-ai',
     githubLink: '#',
+    pic: process
   },
       {
     title: 'Gap Analysis for Logitudinal BioMetrics',
     description: '',
-    tech: ['Python', 'Machine Learning', 'Data Analysis', 'Evaluations'],
-    link: '#',
-    githubLink: '#',
+    tech: [], //'Python', 'Machine Learning', 'Data Analysis', 'Evaluations'
+    link: '/gap-analysis',
+    // githubLink: '#',
+    pic: Gap
   },
-      {
-    title: 'Building FAST APIs for Healthspan RAG Pipelines',
-    description: '',
-    tech: ['Typescript', 'Python', 'Fast API', 'Machine Learning'],
-    link: '#',
-    githubLink: '#',
-  },
-      {
-    title: 'Using LLMs as Judge for Search Quality Evaluations',
-    description: '',
-    tech: ['Python', 'Agents', 'Evaluations'],
-    link: '#',
-    githubLink: '#',
-  },
-      {
+  //     {
+  //   title: 'Building FAST APIs for Healthspan RAG Pipelines',
+  //   description: '',
+  //   tech: ['Typescript', 'Python', 'Fast API', 'Machine Learning'],
+  //   link: '#',
+  //   githubLink: '#',
+  //   pic:
+  // },
+  //     {
+  //   title: 'Using LLMs as Judge for Search Quality Evaluations',
+  //   description: '',
+  //   tech: ['Python', 'Agents', 'Evaluations'],
+  //   link: '#',
+  //   githubLink: '#',
+  //   pic:
+  // },
+  {
     title: 'Med-Dash',
     description: '',
-    tech: ['React', 'TypeScript', 'Data Cleaning', 'Python'],
-    link: '#',
+    tech: [], //'React', 'TypeScript', 'Data Cleaning', 'Python'
+    link: '',
     githubLink: 'https://github.com/Mosherof/med-dash-bioe',
+    pic:MedDash
   },
   {
     title: 'Emosense',
     description: '',
-    tech: ['MATLAB', 'Python', 'Time Series Allignment', 'Sensor Data'],
-    link: '#',
+    tech: [], //'MATLAB', 'Python', 'Time Series Allignment', 'Sensor Data'
+    link: '',
     githubLink: 'https://github.com/Mosherof/emosense',
+    pic:neuroscape
   },
 ]
 

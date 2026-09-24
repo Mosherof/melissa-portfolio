@@ -1,8 +1,17 @@
 
 import { Routes, Route } from 'react-router-dom'
 import Home from './pages/home'
-import CatastrophicForgetting from './pages/catastrophic-forgetting'
 import { Link } from 'react-router-dom'
+
+
+import CatastrophicForgetting from './pages/catastrophic-forgetting'
+import AgenticAi from './pages/agentic-ai'
+import BiologicalCircuits from './pages/biological-circuits'
+import EmoSense from './pages/emosense'
+import GapAnalysis from './pages/gap-analysis'
+import MedDash from './pages/med-dash'
+import SigInt from './pages/sigInt'
+
 
 export default function App() {
 
@@ -44,6 +53,33 @@ export default function App() {
         path="/catastrophic-forgetting"
         element={<CatastrophicForgetting />}
       />
+      <Route
+        path="/agentic-ai"
+        element={<AgenticAi />}
+      />
+      <Route
+        path="/biological-circuits"
+        element={<BiologicalCircuits />}
+      />
+      <Route
+        path="/emosense"
+        element={<EmoSense />}
+      />
+      <Route
+        path="/gap-analysis"
+        element={<GapAnalysis />}
+      />
+
+      <Route
+        path="/med-dash"
+        element={<MedDash />}
+      />
+
+      <Route
+        path="/sigint"
+        element={<SigInt />}
+      />
+      
     </Routes>
     </>
   )

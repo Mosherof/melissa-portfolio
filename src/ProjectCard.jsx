@@ -1,15 +1,10 @@
 import { Link } from 'react-router-dom'
 
-export default function ProjectCard({ title, description, tech, link, githubLink }) {
+export default function ProjectCard({ title, description, tech, link, githubLink, pic }) {
   return (
       <Link to={link}>
         <div className="project-card">
-          <iframe
-        src={"https://drive.google.com/file/d/1_JWVMwGDUJEacXQ4P9vJ-EHoDVc8UhUf/preview"}
-        width="90%"
-        height="200rem"
-        // title="Resume"
-      />
+          <img src={pic}></img>
       <div className="project-content">
         <h3>{title}</h3>
         <p>{description}</p>
@@ -19,12 +14,16 @@ export default function ProjectCard({ title, description, tech, link, githubLink
           ))}
         </div>
         <div className="project-links">
-          <a href={link} target="_blank" rel="noreferrer">
-            Project
-          </a>
-          <a href={githubLink} target="_blank" rel="noreferrer">
-            GitHub
-          </a>
+          {link && link !== '#' && link.trim() !== '' && (
+            <a href={link} target="_blank" rel="noreferrer">
+              Project
+            </a>
+          )}
+          {githubLink && githubLink !== '#' && githubLink.trim() !== '' && (
+            <a href={githubLink} target="_blank" rel="noreferrer">
+              GitHub
+            </a>
+          )}
         </div>
       </div>
     </div>

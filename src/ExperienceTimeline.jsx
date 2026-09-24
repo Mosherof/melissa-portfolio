@@ -8,9 +8,9 @@ export default function ExperienceTimeline({ entries }) {
             <span className="timeline-date timeline-dot-label">{entry.period}</span>
           </div>
 
-          <Link to="/catastrophic-forgetting">
+          {/* <Link to="/catastrophic-forgetting">
             <button>View Resume</button>
-          </Link>
+          </Link> */}
           {/* <Route path="/catastrophic-forgetting" element={<CatastrophicForgetting/>} /> */}
 
           <article className="timeline-card">
