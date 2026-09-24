@@ -296,7 +296,7 @@
 
 .project-card {
   background: #FCD3DE66;
-  border: 1px solid #00050520;
+  border: 1px solid #FCD3DE;
   border-radius: 18px;
   overflow: hidden;
   box-shadow: var(--shadow);
@@ -304,8 +304,16 @@
 
   &:hover {
     transform: translateY(-2px);
-    border-color: #00050559;
+    border-color: #ffe4ec;
   }
+}
+
+.project-card img{
+  margin: 5%;
+  width: 12rem;
+  height: 9rem;
+  border-radius: 10%;
+  border: 2px solid #EEFCCE;
 }
 
 .project-image {

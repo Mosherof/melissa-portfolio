@@ -4,4 +4,9 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: '/melissa-portfolio',
+  build: {
+    cssMinify: 'lightningcss',
+    sourcemap: false,
+    target: 'es2020',
+  },
 })
