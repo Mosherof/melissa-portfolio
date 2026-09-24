@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [react()],
   base: '/melissa-portfolio',
   build: {
-    cssMinify: 'esbuild',
+    cssMinify: 'lightningcss',
     sourcemap: false,
     target: 'es2020',
   },
