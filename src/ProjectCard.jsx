@@ -1,18 +1,10 @@
-export default function ProjectCard({ title, description, tech, link, githubLink }) {
+import { Link } from 'react-router-dom'
+
+export default function ProjectCard({ title, description, tech, link, githubLink, pic }) {
   return (
-    <div className="project-card">
-      {/* <div className="project-image"> */}
-        <iframe
-        src="../..Catastrophic Forgetting in RNN.pdf"
-        width="100%"
-        // height="500px"
-        frameBorder="0"
-        title="PowerPoint Presentation"
-        allowFullScreen
-      >
-        This is an embedded [Microsoft Office](https://office.com) presentation, powered by Office.
-      </iframe>
-      {/* </div> */}
+      <Link to={link}>
+        <div className="project-card">
+          <img src={pic}></img>
       <div className="project-content">
         <h3>{title}</h3>
         <p>{description}</p>
@@ -22,14 +14,21 @@ export default function ProjectCard({ title, description, tech, link, githubLink
           ))}
         </div>
         <div className="project-links">
-          <a href={link} target="_blank" rel="noreferrer">
-            Project
-          </a>
-          <a href={githubLink} target="_blank" rel="noreferrer">
-            GitHub
-          </a>
+          {link && link !== '#' && link.trim() !== '' && (
+            <a href={link} target="_blank" rel="noreferrer">
+              Project
+            </a>
+          )}
+          {githubLink && githubLink !== '#' && githubLink.trim() !== '' && (
+            <a href={githubLink} target="_blank" rel="noreferrer">
+              GitHub
+            </a>
+          )}
         </div>
       </div>
     </div>
+      
+      </Link>
+      
   )
 }
